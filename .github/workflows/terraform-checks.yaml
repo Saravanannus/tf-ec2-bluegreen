@@ -38,3 +38,6 @@ jobs:
 
     - name: Run TFLint
       run: tflint -f compact
+    
+    - name: Run plan
+      run: terraform plan 
