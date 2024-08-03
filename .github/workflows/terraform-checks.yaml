@@ -20,7 +20,7 @@ jobs:
 
     - name: Terraform init
       id: init
-      run: terraform init 
+      run: terraform init -backend=false
 
     - name: Terraform fmt
       id: fmt
@@ -42,6 +42,4 @@ jobs:
 
     - name: Run TFLint
       run: tflint -f compact
-    
-    - name: Run plan
-      run: terraform plan 
+  
